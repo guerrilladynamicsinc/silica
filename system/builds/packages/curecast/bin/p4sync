@@ -1,0 +1,5 @@
+export P4PORT="ssl:hephaestussec.com:1666"
+export P4USER=glass
+export P4CLIENT=glassdev
+export P4PASSWD=curecast2014
+/glass/system/bin/p4 sync

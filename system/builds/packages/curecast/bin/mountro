@@ -1,0 +1,3 @@
+echo "Mounting /system as RO"
+mount -o ro,remount /dev/block/platform/omap/omap_hsmmc.1/by-name/system /system
+echo "Done"

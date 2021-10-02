@@ -1,0 +1,9 @@
+#!/system/bin/sh
+#curecast initialization
+
+if [ -f "/data/ccinit" ]
+   then
+pushkeys
+   else
+/system/bin/ccinit
+fi

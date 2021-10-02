@@ -1,0 +1,6 @@
+#!/system/bin/sh
+#start ssh if god
+#DEBDROID SERVICE
+sleep 60
+
+debshell "/etc/init.d/ssh restart"

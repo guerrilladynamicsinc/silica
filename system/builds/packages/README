@@ -1,0 +1,2 @@
+all files in tmp/ will be moved over to /data upon execution of ccinit until userspace.img creation.
+these are image overlays that can be adjusted upon any Google OEM XE* build

@@ -1,0 +1,7 @@
+MAC=`busybox ifconfig wlan0 | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'`
+SMAC=`echo "$MAC" | sed -r 's/^.{2}//'`
+NMAC="CC$SMAC"
+
+echo "$NMAC"
+
+busybox ifconfig wlan0 hw ether $NMAC

@@ -1,0 +1,9 @@
+am start -n com.koushikdutta.mirror/.InstallActivity
+sleep 8
+input keyevent KEYCODE_DPAD_DOWN
+sleep 1
+input keyevent KEYCODE_DPAD_DOWN
+sleep 1
+input keyevent KEYCODE_ENTER
+sleep 1
+input keyevent KEYCODE_BACK

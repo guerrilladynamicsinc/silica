@@ -1,0 +1,18 @@
+#!/bin/bash
+#TO BE RUN IN THE DEBDROID ENVIRONMENT
+#ENVOKED WITH DEBSHELL PATH
+TS=`date +%s`
+FILE=`cat /glass/data/vidship.log | tail -n 1`
+BASENAME=`echo "${FILE##*/}"`
+EXT=`echo "${FILE##*.}"`
+
+# connect via rsync over ssh
+if [ -f "/glass/data/vidship.log" ]
+then
+mv $FILE $FILE.lck
+rsync -rzPu -v --ignore-existing -e ssh "$FILE.lck" vidcast:~/video/CC_$BASENAME && mv $FILE.lck $FILE
+
+
+else
+echo "do nuttin.."
+fi

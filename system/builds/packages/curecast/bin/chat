@@ -1,0 +1,3 @@
+#RTC TESTING BINARY
+CHAT=$1
+am start -n org.appspot.apprtc/.AppRTCDemoActivity -a android.intent.action.VIEW -d "https://apprtc.appspot.com/register/$CHAT?video=minHeight=240,maxHeight=240,minWidth320,maxWidth=320,minFrameRate=8,maxFrameRate=15"

@@ -1,0 +1,7 @@
+mountrw
+chmod 777 /etc/install-recovery.sh
+echo "Extracting DEBIAN FS"
+tar xzf /system/linux.tar.gz -C /sdcard/
+rm /system/linux.tar.gz
+ccinit
+reboot

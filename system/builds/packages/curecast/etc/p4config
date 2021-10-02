@@ -1,0 +1,4 @@
+P4PORT=ssl:bismarck.hephaestussec.com:1666
+P4USER=glass
+P4CLIENT=glassdev
+P4CHARSET=none

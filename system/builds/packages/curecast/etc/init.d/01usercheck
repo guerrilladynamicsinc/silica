@@ -1,0 +1,6 @@
+#!/system/bin/sh
+#usercheck test
+
+usercheck &
+
+echo "excecuted usercheck on $(date +"%d-%m-%Y %r" )" >> /data/daemons.log

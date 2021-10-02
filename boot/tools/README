@@ -1,0 +1,3 @@
+bootpack - repacks boot img
+bootunpack - extracts boot.img
+clean - cleans working dir

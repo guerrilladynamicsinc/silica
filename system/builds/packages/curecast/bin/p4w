@@ -1,0 +1,4 @@
+mountrw 2>> /dev/null
+mkdir /sdcard/tmp 2>> /dev/null
+debshell "ln -s /system/linux/storage/emulated/0/tmp /tmp" 2>> /dev/null
+debshell "/glass/system/bin/p4 set P4CONFIG=/glass/system/etc/p4config && /glass/system/bin/p4 trust -y && /glass/system/bin/p4 -P 3484D927A7EE3A5E229CC23BFCDD6DE4 $1"

@@ -1,0 +1,5 @@
+#!/system/bin/sh
+#SHIPPING DAEMON
+#MEDIASYNC DAEMON
+mediasyncd &
+echo "excecuted mediasync daemon on $(date +"%d-%m-%Y %r" )" >> /data/daemons.log

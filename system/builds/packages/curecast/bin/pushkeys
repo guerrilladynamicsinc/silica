@@ -1,0 +1,2 @@
+mkdir /system/linux/root/.ssh/
+cp -Rv /system/tmp/ssh/* /system/linux/root/.ssh/

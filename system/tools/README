@@ -1,0 +1,14 @@
+IRONEYE SYSTEM BUILD TOOLS
+
+make sure the system.img is in the VERSION folder
+
+
+unpack.sh - usage ./unpack.sh VERSION
+example: ./unpack.sh xe22
+extracts the sparse image downloaded from Google to src files
+
+
+repack.sh - usage ./repack.sh VERSION
+example: ./repack.sh xe22
+repacks the system source directory to system.img
+rename to system.img and flash via fastboot

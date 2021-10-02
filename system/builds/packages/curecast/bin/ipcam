@@ -1,0 +1,17 @@
+if [ -f "/data/ipcaminit" ]
+   then
+        am start -n com.pas.webcam/.Rolling
+		sleep 2
+		input keyevent KEYCODE_DPAD_RIGHT
+		input keyevent KEYCODE_ENTER
+		input keyevent KEYCODE_DPAD_DOWN
+		input keyevent KEYCODE_DPAD_DOWN
+		input keyevent KEYCODE_ENTER
+		input keyevent KEYCODE_ENTER
+		
+   else
+touch /data/ipcaminit
+pm install /system/noload/Ipcam.apk
+/system/bin/ipcamfps 15
+ipcam
+fi

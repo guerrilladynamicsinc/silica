@@ -1,0 +1,16 @@
+#copy over databases
+mountrw
+cp -Rv /system/tmp/* /data
+pm disable com.google.glass.setup
+rm /data/dalvik-cache/system@priv-app@GlassSettings.apk@classes.dex
+mount -o rw,remount /dev/block/platform/omap/omap_hsmmc.1/by-name/system /system
+#remove settings and boot into regular mode
+mv /system/priv-app/GlassSettings.apk /system/priv-app/GlassSettings.apk.bak
+#remove all temporary files
+#rm -rf /system/tmp
+mount -o ro,remount /dev/block/platform/omap/omap_hsmmc.1/by-name/system /system
+#set timezone
+setprop persist.sys.timezone "America/New_York"
+touch /data/ccinit
+sleep 5
+reboot

@@ -1,0 +1,2 @@
+mountrw
+debshell "/glass/system/bin/p4sync"

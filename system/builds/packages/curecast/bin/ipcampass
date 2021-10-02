@@ -1,0 +1,32 @@
+am start -n com.pas.webcam/.Configuration
+sleep 3
+#input keyevent KEYCODE_DPAD_DOWN
+sleep 1
+#input keyevent KEYCODE_ENTER
+input keyevent KEYCODE_DPAD_DOWN                              
+input keyevent KEYCODE_DPAD_DOWN                              
+input keyevent KEYCODE_DPAD_DOWN                              
+input keyevent KEYCODE_DPAD_DOWN                              
+input keyevent KEYCODE_DPAD_DOWN
+input keyevent KEYCODE_DPAD_DOWN                              
+input keyevent KEYCODE_DPAD_DOWN                              
+input keyevent KEYCODE_DPAD_DOWN                              
+input keyevent KEYCODE_DPAD_DOWN                              
+input keyevent KEYCODE_DPAD_DOWN                           
+input keyevent KEYCODE_DPAD_DOWN                              
+input keyevent KEYCODE_DPAD_DOWN    
+input keyevent KEYCODE_ENTER
+input keyevent KEYCODE_DPAD_DOWN
+input keyboard text $1
+input keyevent KEYCODE_DPAD_DOWN
+input keyevent KEYCODE_ENTER
+input keyevent KEYCODE_ESCAPE
+#input keyevent KEYCODE_DPAD_RIGHT
+#input keyevent KEYCODE_DPAD_RIGHT
+#input keyevent KEYCODE_DEL
+#input keyevent KEYCODE_DEL
+#SET FPS HERE
+#input keyboard text "$1"
+#input keyevent KEYCODE_DPAD_RIGHT
+#input keyevent KEYCODE_ENTER
+#input keyevent KEYCODE_ESCAPE

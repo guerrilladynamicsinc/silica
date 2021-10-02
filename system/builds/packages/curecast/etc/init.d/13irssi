@@ -1,0 +1,1 @@
+debshell "screen -d -m -S irssi irssi"

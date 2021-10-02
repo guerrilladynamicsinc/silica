@@ -1,0 +1,37 @@
+#Catches the file path of the latest recorded video
+#Uploads the video to the predetermined server
+TS=`date +%s`
+upvars() {
+#echo "Checking..."
+CMD=`logcat -d | grep "FILE path:" | tail -n 1 | cut -c 92-`
+
+#echo "CMD: $CMD"
+}
+setvar() {
+EXEC="$CMD"
+while [ "$EXEC" == "$CMD" ]
+do
+#echo "Sleeping..."
+sleep 10
+upvars
+done
+if [ "$CMD" != "" ]
+then
+echo "Shipping MEDIA $CMD at $TS" >> /data/shipper.log
+echo $CMD >> /data/vidship.log
+sleep 2
+debshell "glass/system/bin/mediasync"
+sleep 2
+#CLEANUP OUR HIPAA-HEADACHE
+#debshell "rm $CMD"
+#rm /data/vidship.log
+fi
+}
+main() {
+while true
+do
+setvar
+done
+}
+upvars
+main

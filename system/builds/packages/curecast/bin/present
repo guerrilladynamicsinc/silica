@@ -1,0 +1,30 @@
+if [ -f "/data/presentinit" ]
+   then
+        /system/bin/presentserver
+   else
+touch /data/presentinit
+pm install /system/noload/Present.apk
+am start -n com.koushikdutta.mirror/.InstallActivity
+sleep 5
+input keyevent KEYCODE_DPAD_RIGHT
+sleep 1
+input keyevent KEYCODE_DPAD_RIGHT
+input keyevent KEYCODE_ENTER
+sleep 3                                  
+input keyevent KEYCODE_ENTER
+sleep 1                                  
+input keyevent KEYCODE_DOWN
+sleep 1                                   
+input keyevent KEYCODE_DPAD_DOWN
+sleep 1                              
+input keyevent KEYCODE_DPAD_DOWN
+sleep 1                              
+input keyevent KEYCODE_ENTER
+sleep 1                                  
+input keyevent KEYCODE_DPAD_DOWN
+sleep 1                              
+input keyevent KEYCODE_DPAD_RIGHT
+sleep 2                             
+input keyevent KEYCODE_ENTER
+sleep 2
+fi

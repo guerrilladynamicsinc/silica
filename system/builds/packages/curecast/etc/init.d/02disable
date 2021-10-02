@@ -1,0 +1,5 @@
+#!/system/bin/sh
+#disable startup package
+#shotgun effect
+
+for i in {1..10}; do pm disable com.google.glass.setup && sleep 3; done
